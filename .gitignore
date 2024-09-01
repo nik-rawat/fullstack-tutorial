@@ -1,0 +1,25 @@
+# Ignore operating system files
+*.tmp
+*.log
+
+# Ignore IDE and text editor files
+.vscode/
+.idea/
+
+# Ignore node_modules and package-lock.json
+node_modules/
+package-lock.json
+
+# Ignore MongoDB data files
+data/
+
+# Ignore build and production files
+build/
+dist/
+
+# Ignore environment files
+.env
+.env.local
+.env.development
+.env.production
+.env.test
