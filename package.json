@@ -4,9 +4,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "frontend": "cd frontend && npm start",
-    "backend": "cd backend && npm start",
-    "start": "concurrently \"npm run frontend\" \"npm run backend\""
+    "install-all": "npm install --prefix frontend && npm install --prefix backend",
+    "build": "concurrently \"npm run build --prefix frontend\" \"npm start --prefix backend\"",
+    "start": "node backend/server.js",
+    "dev": "concurrently \"npm start --prefix backend\" \"npm start --prefix frontend\""
   },
   "keywords": [],
   "author": "",
