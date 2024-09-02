@@ -1,13 +1,13 @@
 {
   "name": "webapp",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./backend/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install-all": "npm install --prefix frontend && npm install --prefix backend",
-    "build": "concurrently \"npm run build --prefix frontend\" \"npm start --prefix backend\"",
+    "build": "concurrently \"cd frontend && npm run build\" \"cd backend && npm start\"",
     "start": "node backend/server.js",
-    "dev": "concurrently \"npm start --prefix backend\" \"npm start --prefix frontend\""
+    "dev": "concurrently \"cd backend && npm start\" \"cd frontend && npm start\""
   },
   "keywords": [],
   "author": "",
